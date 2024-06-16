@@ -72,7 +72,7 @@ keys.forEach(key => {
 });
 
 function playSound(note) {
-    const audio = new Audio(`sound/${note}.svg`);
+    const audio = new Audio(`sound/${note}.wav`);
     audio.play();
 }
 
