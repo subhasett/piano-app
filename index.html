@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Learning App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Piano Learning App</h1>
+        <div id="sign-up">
+            <h2>Sign Up</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <div id="welcome" style="display: none;">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <button onclick="startChat()">Start Chat</button>
+            <button onclick="showVideo()">Watch Tutorial Video</button>
+            <button onclick="showPiano()">Digital Piano</button>
+            <button onclick="showSongs()">Learn Songs</button> 
+        </div>
+        <div id="chat" style="display: none;">
+            <h2>Chatbot</h2>
+            <div id="chat-output"></div>
+            <input type="text" id="chat-input" placeholder="Ask something...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div id="video" style="display: none;">
+            <h2>Beginner Tutorial Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/827jmswqnEA?si=Bpj-PeUiXFdKHwQo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="piano" style="display: none;">
+            <h2>Digital Piano</h2>
+            <button id="connect-midi" onclick="connectMIDIDevice()">Connect to MIDI Keyboard</button>
+            <button id="connect-bluetooth" onclick="connectBluetoothKeyboard()">Connect to Bluetooth Keyboard</button>
+            <div id="keys">
+                <div class="key white" data-note="C"></div>
+                <div class="key black" data-note="C#"></div>
+                <div class="key white" data-note="D"></div>
+                <div class="key black" data-note="D#"></div>
+                <div class="key white" data-note="E"></div>
+                <div class="key white" data-note="F"></div>
+                <div class="key black" data-note="F#"></div>
+                <div class="key white" data-note="G"></div>
+                <div class="key black" data-note="G#"></div>
+                <div class="key white" data-note="A"></div>
+                <div class="key black" data-note="A#"></div>
+                <div class="key white" data-note="B"></div>
+            </div>
+        </div>
+        <div id="songs" style="display: none;">
+            <h2>Learn Songs</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/embed/fVOJxg41Qi0?si=4vzJkXqlS5TPyNi9" target="_blank">Eine kleine Nachtmusik</a></li>
+                <li><a href="https://www.youtube.com/embed/cmLTH3UDd_s?si=mjzRhW8XUqH1hjIi" target="_blank">Fur Elise</a></li>
+                <li><a href="https://www.youtube.com/embed/0x-wNJKzlAs?si=UcC0Vx8_ZZXl8Qtf" target="_blank">Heart and Soul</a></li>
+                <li><a href="https://www.youtube.com/embed/HOIrOjrioEs?si=1OeEvtlAjgYNi9bp" target="_blank">Moonlight Sonata</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
